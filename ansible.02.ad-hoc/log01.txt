@@ -1,0 +1,196 @@
+ansible-4 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "comment": "", 
+    "create_home": true, 
+    "group": 1001, 
+    "home": "/home/ansible", 
+    "name": "ansible", 
+    "shell": "/bin/bash", 
+    "state": "present", 
+    "stderr": "Creating mailbox file: File exists\n", 
+    "stderr_lines": [
+        "Creating mailbox file: File exists"
+    ], 
+    "system": false, 
+    "uid": 1001
+}
+ansible-3 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "comment": "", 
+    "create_home": true, 
+    "group": 1001, 
+    "home": "/home/ansible", 
+    "name": "ansible", 
+    "shell": "/bin/bash", 
+    "state": "present", 
+    "stderr": "Creating mailbox file: File exists\n", 
+    "stderr_lines": [
+        "Creating mailbox file: File exists"
+    ], 
+    "system": false, 
+    "uid": 1001
+}
+ansible-2 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "comment": "", 
+    "create_home": true, 
+    "group": 1001, 
+    "home": "/home/ansible", 
+    "name": "ansible", 
+    "shell": "/bin/bash", 
+    "state": "present", 
+    "stderr": "Creating mailbox file: File exists\n", 
+    "stderr_lines": [
+        "Creating mailbox file: File exists"
+    ], 
+    "system": false, 
+    "uid": 1001
+}
+ansible-5 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "comment": "", 
+    "create_home": true, 
+    "group": 1001, 
+    "home": "/home/ansible", 
+    "name": "ansible", 
+    "shell": "/bin/bash", 
+    "state": "present", 
+    "stderr": "Creating mailbox file: File exists\n", 
+    "stderr_lines": [
+        "Creating mailbox file: File exists"
+    ], 
+    "system": false, 
+    "uid": 1001
+}
+ansible-4 | CHANGED | rc=0 >>
+
+ansible-3 | CHANGED | rc=0 >>
+
+ansible-2 | CHANGED | rc=0 >>
+
+ansible-5 | CHANGED | rc=0 >>
+
+ansible-4 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "checksum": "fa7f54fd717eac51b96776a23b77579429052e25", 
+    "dest": "/home/ansible/.ssh/id_rsa.pub", 
+    "gid": 0, 
+    "group": "root", 
+    "md5sum": "c9b2546ba95a3fac9b8b4db70927be9d", 
+    "mode": "0644", 
+    "owner": "root", 
+    "secontext": "unconfined_u:object_r:ssh_home_t:s0", 
+    "size": 405, 
+    "src": "/root/.ansible/tmp/ansible-tmp-1602235829.79-24229-84802377232525/source", 
+    "state": "file", 
+    "uid": 0
+}
+ansible-5 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "checksum": "fa7f54fd717eac51b96776a23b77579429052e25", 
+    "dest": "/home/ansible/.ssh/id_rsa.pub", 
+    "gid": 0, 
+    "group": "root", 
+    "md5sum": "c9b2546ba95a3fac9b8b4db70927be9d", 
+    "mode": "0644", 
+    "owner": "root", 
+    "secontext": "unconfined_u:object_r:ssh_home_t:s0", 
+    "size": 405, 
+    "src": "/root/.ansible/tmp/ansible-tmp-1602235830.0-24236-146164443808153/source", 
+    "state": "file", 
+    "uid": 0
+}
+ansible-3 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "checksum": "fa7f54fd717eac51b96776a23b77579429052e25", 
+    "dest": "/home/ansible/.ssh/id_rsa.pub", 
+    "gid": 0, 
+    "group": "root", 
+    "md5sum": "c9b2546ba95a3fac9b8b4db70927be9d", 
+    "mode": "0644", 
+    "owner": "root", 
+    "secontext": "unconfined_u:object_r:ssh_home_t:s0", 
+    "size": 405, 
+    "src": "/root/.ansible/tmp/ansible-tmp-1602235829.76-24227-177010679145761/source", 
+    "state": "file", 
+    "uid": 0
+}
+ansible-2 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "checksum": "fa7f54fd717eac51b96776a23b77579429052e25", 
+    "dest": "/home/ansible/.ssh/id_rsa.pub", 
+    "gid": 0, 
+    "group": "root", 
+    "md5sum": "c9b2546ba95a3fac9b8b4db70927be9d", 
+    "mode": "0644", 
+    "owner": "root", 
+    "secontext": "unconfined_u:object_r:ssh_home_t:s0", 
+    "size": 405, 
+    "src": "/root/.ansible/tmp/ansible-tmp-1602235829.87-24232-182312868091926/source", 
+    "state": "file", 
+    "uid": 0
+}
+ansible-5 | CHANGED | rc=0 >>
+
+ansible-2 | CHANGED | rc=0 >>
+
+ansible-3 | CHANGED | rc=0 >>
+
+ansible-4 | CHANGED | rc=0 >>
+
+ansible-5 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "backup": "", 
+    "changed": true, 
+    "msg": "line added"
+}
+ansible-2 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "backup": "", 
+    "changed": true, 
+    "msg": "line added"
+}
+ansible-4 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "backup": "", 
+    "changed": true, 
+    "msg": "line added"
+}
+ansible-3 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "backup": "", 
+    "changed": true, 
+    "msg": "line added"
+}

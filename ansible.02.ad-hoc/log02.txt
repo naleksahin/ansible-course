@@ -1,0 +1,162 @@
+ansible-3 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "checksum": "8a5c1ef25fe225db8daead602713b81c8811627f", 
+    "dest": "/tmp/hosts", 
+    "gid": 0, 
+    "group": "root", 
+    "mode": "0644", 
+    "owner": "root", 
+    "path": "/tmp/hosts", 
+    "secontext": "unconfined_u:object_r:admin_home_t:s0", 
+    "size": 232, 
+    "state": "file", 
+    "uid": 0
+}
+ansible-4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "checksum": "8a5c1ef25fe225db8daead602713b81c8811627f", 
+    "dest": "/tmp/hosts", 
+    "gid": 0, 
+    "group": "root", 
+    "mode": "0644", 
+    "owner": "root", 
+    "path": "/tmp/hosts", 
+    "secontext": "unconfined_u:object_r:admin_home_t:s0", 
+    "size": 232, 
+    "state": "file", 
+    "uid": 0
+}
+ansible-3 | CHANGED => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": true, 
+    "changes": {
+        "installed": [
+            "elinks"
+        ]
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "Loaded plugins: fastestmirror\nLoading mirror speeds from cached hostfile\n * base: mirror.datacenter.by\n * epel: mirror.yandex.ru\n * extras: mirror.datacenter.by\n * updates: mirror.datacenter.by\nResolving Dependencies\n--> Running transaction check\n---> Package elinks.x86_64 0:0.12-0.37.pre6.el7.0.1 will be installed\n--> Finished Dependency Resolution\n\nDependencies Resolved\n\n================================================================================\n Package       Arch          Version                          Repository   Size\n================================================================================\nInstalling:\n elinks        x86_64        0.12-0.37.pre6.el7.0.1           base        882 k\n\nTransaction Summary\n================================================================================\nInstall  1 Package\n\nTotal download size: 882 k\nInstalled size: 2.6 M\nDownloading packages:\nRunning transaction check\nRunning transaction test\nTransaction test succeeded\nRunning transaction\n  Installing : elinks-0.12-0.37.pre6.el7.0.1.x86_64                         1/1 \n  Verifying  : elinks-0.12-0.37.pre6.el7.0.1.x86_64                         1/1 \n\nInstalled:\n  elinks.x86_64 0:0.12-0.37.pre6.el7.0.1                                        \n\nComplete!\n"
+    ]
+}
+ansible-4 | CHANGED | rc=0 >>
+Filesystem                       Size  Used Avail Use% Mounted on
+devtmpfs                         233M     0  233M   0% /dev
+tmpfs                            244M     0  244M   0% /dev/shm
+tmpfs                            244M   17M  227M   7% /run
+tmpfs                            244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos_centos7-root   50G  1.3G   49G   3% /
+sync                             639G  249G  390G  39% /sync
+/dev/sda1                       1014M  130M  885M  13% /boot
+/dev/mapper/centos_centos7-home   75G   33M   75G   1% /home
+tmpfs                             49M     0   49M   0% /run/user/1001
+ansible-3 | CHANGED | rc=0 >>
+Filesystem                       Size  Used Avail Use% Mounted on
+devtmpfs                         233M     0  233M   0% /dev
+tmpfs                            244M     0  244M   0% /dev/shm
+tmpfs                            244M   17M  227M   7% /run
+tmpfs                            244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos_centos7-root   50G  1.5G   49G   3% /
+sync                             639G  249G  390G  39% /sync
+/dev/sda1                       1014M  130M  885M  13% /boot
+/dev/mapper/centos_centos7-home   75G   33M   75G   1% /home
+tmpfs                             49M     0   49M   0% /run/user/1001
+ansible-5 | CHANGED | rc=0 >>
+Filesystem                       Size  Used Avail Use% Mounted on
+devtmpfs                         233M     0  233M   0% /dev
+tmpfs                            244M     0  244M   0% /dev/shm
+tmpfs                            244M   17M  227M   7% /run
+tmpfs                            244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos_centos7-root   50G  1.3G   49G   3% /
+sync                             639G  249G  390G  39% /sync
+/dev/sda1                       1014M  130M  885M  13% /boot
+/dev/mapper/centos_centos7-home   75G   33M   75G   1% /home
+tmpfs                             49M     0   49M   0% /run/user/1001
+ansible-2 | CHANGED | rc=0 >>
+Filesystem                       Size  Used Avail Use% Mounted on
+devtmpfs                         233M     0  233M   0% /dev
+tmpfs                            244M     0  244M   0% /dev/shm
+tmpfs                            244M   17M  227M   7% /run
+tmpfs                            244M     0  244M   0% /sys/fs/cgroup
+/dev/mapper/centos_centos7-root   50G  1.3G   49G   3% /
+sync                             639G  249G  390G  39% /sync
+/dev/sda1                       1014M  130M  885M  13% /boot
+/dev/mapper/centos_centos7-home   75G   33M   75G   1% /home
+tmpfs                             49M     0   49M   0% /run/user/1001
+ansible-4 | CHANGED | rc=0 >>
+              total        used        free      shared  buff/cache   available
+Mem:            486         144         138          16         203         312
+Swap:          2047           0        2047
+ansible-2 | CHANGED | rc=0 >>
+              total        used        free      shared  buff/cache   available
+Mem:            486         144         138          16         203         312
+Swap:          2047           0        2047
+ansible-5 | CHANGED | rc=0 >>
+              total        used        free      shared  buff/cache   available
+Mem:            486         144         139          16         203         313
+Swap:          2047           0        2047
+ansible-3 | CHANGED | rc=0 >>
+              total        used        free      shared  buff/cache   available
+Mem:            486         138         122          10         225         325
+Swap:          2047           6        2041
+ansible-3 | CHANGED | rc=0 >>
+-rw-------. 1 root root 113273 Oct  9 13:41 /var/log/messages
+ansible-5 | CHANGED | rc=0 >>
+-rw-------. 1 root root 104457 Oct  9 13:41 /var/log/messages
+ansible-4 | CHANGED | rc=0 >>
+-rw-------. 1 root root 107772 Oct  9 13:41 /var/log/messages
+ansible-2 | CHANGED | rc=0 >>
+-rw-------. 1 root root 104858 Oct  9 13:41 /var/log/messages
+ansible-4 | CHANGED | rc=0 >>
+Oct  9 13:40:01 ansible-4 systemd: Removed slice User Slice of root.
+Oct  9 13:41:01 ansible-4 systemd: Created slice User Slice of ansible.
+Oct  9 13:41:01 ansible-4 systemd-logind: New session 756 of user ansible.
+Oct  9 13:41:01 ansible-4 systemd: Started Session 756 of user ansible.
+Oct  9 13:41:03 ansible-4 ansible-stat: Invoked with checksum_algorithm=sha1 get_checksum=True follow=False path=/tmp/hosts get_md5=False get_mime=True get_attributes=True
+Oct  9 13:41:04 ansible-4 ansible-file: Invoked with directory_mode=None force=False remote_src=None _original_basename=hosts path=/tmp/hosts owner=None follow=True group=None unsafe_writes=None setype=None content=NOT_LOGGING_PARAMETER serole=None selevel=None state=file dest=/tmp/hosts access_time=None access_time_format=%Y%m%d%H%M.%S modification_time=None regexp=None src=None seuser=None recurse=False _diff_peek=None delimiter=None mode=None modification_time_format=%Y%m%d%H%M.%S attributes=None backup=None
+Oct  9 13:41:29 ansible-4 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=df -h removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:33 ansible-4 ansible-command: Invoked with creates=None executable=None _uses_shell=True strip_empty_ends=True _raw_params=free -m removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:37 ansible-4 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=ls -l /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:41 ansible-4 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=tail /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+ansible-2 | CHANGED | rc=0 >>
+Oct  9 13:40:01 ansible-2 systemd: Created slice User Slice of root.
+Oct  9 13:40:01 ansible-2 systemd: Started Session 758 of user root.
+Oct  9 13:40:01 ansible-2 systemd: Removed slice User Slice of root.
+Oct  9 13:41:28 ansible-2 systemd: Created slice User Slice of ansible.
+Oct  9 13:41:28 ansible-2 systemd-logind: New session 759 of user ansible.
+Oct  9 13:41:28 ansible-2 systemd: Started Session 759 of user ansible.
+Oct  9 13:41:29 ansible-2 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=df -h removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:33 ansible-2 ansible-command: Invoked with creates=None executable=None _uses_shell=True strip_empty_ends=True _raw_params=free -m removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:37 ansible-2 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=ls -l /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:41 ansible-2 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=tail /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+ansible-5 | CHANGED | rc=0 >>
+Oct  9 13:40:01 ansible-5 systemd: Created slice User Slice of root.
+Oct  9 13:40:01 ansible-5 systemd: Started Session 755 of user root.
+Oct  9 13:40:01 ansible-5 systemd: Removed slice User Slice of root.
+Oct  9 13:41:28 ansible-5 systemd: Created slice User Slice of ansible.
+Oct  9 13:41:28 ansible-5 systemd-logind: New session 756 of user ansible.
+Oct  9 13:41:28 ansible-5 systemd: Started Session 756 of user ansible.
+Oct  9 13:41:29 ansible-5 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=df -h removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:33 ansible-5 ansible-command: Invoked with creates=None executable=None _uses_shell=True strip_empty_ends=True _raw_params=free -m removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:37 ansible-5 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=ls -l /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:41 ansible-5 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=tail /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+ansible-3 | CHANGED | rc=0 >>
+Oct  9 13:40:29 ansible-3 yum[21327]: Erased: elinks-0.12-0.37.pre6.el7.0.1.x86_64
+Oct  9 13:41:03 ansible-3 ansible-stat: Invoked with checksum_algorithm=sha1 get_checksum=True follow=False path=/tmp/hosts get_md5=False get_mime=True get_attributes=True
+Oct  9 13:41:04 ansible-3 ansible-file: Invoked with directory_mode=None force=False remote_src=None _original_basename=hosts path=/tmp/hosts owner=None follow=True group=None unsafe_writes=None setype=None content=NOT_LOGGING_PARAMETER serole=None selevel=None state=file dest=/tmp/hosts access_time=None access_time_format=%Y%m%d%H%M.%S modification_time=None regexp=None src=None seuser=None recurse=False _diff_peek=None delimiter=None mode=None modification_time_format=%Y%m%d%H%M.%S attributes=None backup=None
+Oct  9 13:41:08 ansible-3 ansible-setup: Invoked with filter=ansible_pkg_mgr gather_subset=['!all'] fact_path=/etc/ansible/facts.d gather_timeout=10
+Oct  9 13:41:10 ansible-3 ansible-yum: Invoked with lock_timeout=30 update_cache=False disable_excludes=None exclude=[] allow_downgrade=False disable_gpg_check=False conf_file=None use_backend=auto state=None disablerepo=[] releasever=None skip_broken=False autoremove=False download_dir=None enable_plugin=[] installroot=/ install_weak_deps=True name=['elinks'] download_only=False bugfix=False list=None install_repoquery=True update_only=False disable_plugin=[] enablerepo=[] security=False validate_certs=True
+Oct  9 13:41:25 ansible-3 yum[21588]: Installed: elinks-0.12-0.37.pre6.el7.0.1.x86_64
+Oct  9 13:41:29 ansible-3 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=df -h removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:33 ansible-3 ansible-command: Invoked with creates=None executable=None _uses_shell=True strip_empty_ends=True _raw_params=free -m removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:37 ansible-3 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=ls -l /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
+Oct  9 13:41:41 ansible-3 ansible-command: Invoked with creates=None executable=None _uses_shell=False strip_empty_ends=True _raw_params=tail /var/log/messages removes=None argv=None warn=True chdir=None stdin_add_newline=True stdin=None
