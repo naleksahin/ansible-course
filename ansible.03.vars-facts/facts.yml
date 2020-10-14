@@ -1,0 +1,18 @@
+- hosts: database
+  tasks:
+
+    - name: create directory for ansible custom facts
+      file: state=directory recurse=yes path=/etc/ansible/facts.d
+
+    - name: Create a static custom fact foo
+      copy:
+        dest: /etc/ansible/facts.d/custom.fact
+        mode: 0755
+        content: |
+          #!/bin/bash
+          cat << EOF
+          { "role": "server_role=mysql" }
+          EOF
+
+    - name: re-read facts after adding custom fact
+      setup: filter=ansible_local
