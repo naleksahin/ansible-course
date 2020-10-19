@@ -1,0 +1,17 @@
+- hosts: all
+  tasks:
+  - name: Replace content on HAProxy
+    copy:
+      content: "Welcome to HAProxy server"
+      dest: /etc/motd
+    when: inventory_hostname in groups['proxy']
+  - name: Replace content on Apache
+    copy:
+      content: "Welcome to Apache server"
+      dest: /etc/motd
+    when:  inventory_hostname in groups['webservers']
+  - name: Replace content on MySQL
+    copy:
+      content: "Welcome to MySQL server"
+      dest: /etc/motd
+    when:  inventory_hostname in groups['database']
