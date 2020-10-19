@@ -16,3 +16,4 @@
 
     - name: re-read facts after adding custom fact
       setup: filter=ansible_local
+    - debug: msg="Ansible variables ---- {{ ansible_local.custom.role }}"
