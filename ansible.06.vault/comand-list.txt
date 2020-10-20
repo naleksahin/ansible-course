@@ -1,0 +1,3 @@
+ansible-vault create secret.yml
+echo '#!/bin/bash' > vault_key && echo "echo 'devops'" >> vault_key
+ansible-vault view secret.yml --vault-password-file=vault_key
