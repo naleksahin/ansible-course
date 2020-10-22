@@ -3,7 +3,8 @@
     - vars/user_list.yml
     - secret.yml
   tasks:
-  - user:
+  - name: Create users on 'Webservers'
+    user:
       name: "{{ item.username }}"
       group: "wheel"
       shell: "/bin/bash"
@@ -11,7 +12,8 @@
       createhome: yes
     with_items: '{{users}}'
     when: item.uid > 1000 and item.uid < 2000 and 'webservers' in group_names
-  - user:
+  - name: Create users on 'database'
+    user:
       name: "{{ item.username }}"
       password: "{{ user_password | password_hash('sha512')}}"
       group: "wheel"
@@ -20,13 +22,15 @@
       createhome: yes
     with_items: '{{users}}'
     when: item.uid > 2000 and item.uid < 3000 and 'database' in group_names
-  - authorized_key:
+  - name: Config SSH on 'Webservers'
+    authorized_key:
       user: "{{ item.username }}"
       state: present
       key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"  
     with_items: " {{ users }}"
     when: item.uid > 1000 and item.uid < 2000 and 'webservers' in group_names
-  - authorized_key:
+  - name: Config SSH on 'database
+    authorized_key:
       user: "{{ item.username }}"
       state: present
       key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"  

@@ -2,30 +2,30 @@
 PLAY [all] ******************************************************************************************************************************************************************************************************************************************************************
 
 TASK [Gathering Facts] ******************************************************************************************************************************************************************************************************************************************************
-ok: [ansible-2]
-ok: [ansible-4]
-ok: [ansible-5]
 ok: [ansible-3]
+ok: [ansible-5]
+ok: [ansible-4]
+ok: [ansible-2]
 
-TASK [user] *****************************************************************************************************************************************************************************************************************************************************************
+TASK [Create users on 'Webservers'] *****************************************************************************************************************************************************************************************************************************************
 skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
 skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
-skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
-skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
-skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
 skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
 skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
 skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
-ok: [ansible-3] => (item={u'username': u'alice', u'uid': 1201})
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
 ok: [ansible-4] => (item={u'username': u'alice', u'uid': 1201})
-ok: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202})
-skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
-skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-3] => (item={u'username': u'alice', u'uid': 1201})
 ok: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202})
 skipping: [ansible-4] => (item={u'username': u'sandy', u'uid': 2201}) 
 skipping: [ansible-4] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202})
+skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
 
-TASK [user] *****************************************************************************************************************************************************************************************************************************************************************
+TASK [Create users on 'database'] *******************************************************************************************************************************************************************************************************************************************
 skipping: [ansible-3] => (item={u'username': u'alice', u'uid': 1201}) 
 skipping: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202}) 
 skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
@@ -43,15 +43,15 @@ skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202})
 changed: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201})
 changed: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202})
 
-TASK [authorized_key] *******************************************************************************************************************************************************************************************************************************************************
-skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
-skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
-skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
-skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
+TASK [Config SSH on 'Webservers'] *******************************************************************************************************************************************************************************************************************************************
 skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
 skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
 skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
 skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
 ok: [ansible-4] => (item={u'username': u'alice', u'uid': 1201})
 ok: [ansible-3] => (item={u'username': u'alice', u'uid': 1201})
 ok: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202})
@@ -61,7 +61,7 @@ ok: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202})
 skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
 skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
 
-TASK [authorized_key] *******************************************************************************************************************************************************************************************************************************************************
+TASK [Config SSH on 'database] **********************************************************************************************************************************************************************************************************************************************
 skipping: [ansible-3] => (item={u'username': u'alice', u'uid': 1201}) 
 skipping: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202}) 
 skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
