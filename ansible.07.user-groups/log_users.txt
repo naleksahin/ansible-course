@@ -1,0 +1,87 @@
+
+PLAY [all] ******************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************************************************************************************************************
+ok: [ansible-2]
+ok: [ansible-4]
+ok: [ansible-5]
+ok: [ansible-3]
+
+TASK [user] *****************************************************************************************************************************************************************************************************************************************************************
+skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-3] => (item={u'username': u'alice', u'uid': 1201})
+ok: [ansible-4] => (item={u'username': u'alice', u'uid': 1201})
+ok: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202})
+skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202})
+skipping: [ansible-4] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-4] => (item={u'username': u'patrick', u'uid': 2202}) 
+
+TASK [user] *****************************************************************************************************************************************************************************************************************************************************************
+skipping: [ansible-3] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-4] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-4] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-4] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+changed: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201})
+changed: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202})
+
+TASK [authorized_key] *******************************************************************************************************************************************************************************************************************************************************
+skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-4] => (item={u'username': u'alice', u'uid': 1201})
+ok: [ansible-3] => (item={u'username': u'alice', u'uid': 1201})
+ok: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202})
+skipping: [ansible-4] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-4] => (item={u'username': u'patrick', u'uid': 2202}) 
+ok: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202})
+skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
+
+TASK [authorized_key] *******************************************************************************************************************************************************************************************************************************************************
+skipping: [ansible-3] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-3] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-3] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-3] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-4] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-4] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-4] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-4] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-2] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-2] => (item={u'username': u'vincent', u'uid': 1202}) 
+skipping: [ansible-2] => (item={u'username': u'sandy', u'uid': 2201}) 
+skipping: [ansible-2] => (item={u'username': u'patrick', u'uid': 2202}) 
+skipping: [ansible-5] => (item={u'username': u'alice', u'uid': 1201}) 
+skipping: [ansible-5] => (item={u'username': u'vincent', u'uid': 1202}) 
+ok: [ansible-5] => (item={u'username': u'sandy', u'uid': 2201})
+ok: [ansible-5] => (item={u'username': u'patrick', u'uid': 2202})
+
+PLAY RECAP ******************************************************************************************************************************************************************************************************************************************************************
+ansible-2                  : ok=1    changed=0    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+ansible-3                  : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+ansible-4                  : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+ansible-5                  : ok=3    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+
