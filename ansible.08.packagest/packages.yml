@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+    - name: Install pachages on proxy
+      yum:
+        name: ['tcpdump', 'mailx']
+        state: present 
+      when: inventory_hostname in groups['proxy']
+    - name: Install pachages on database
+      yum:
+        name: ['lsof', 'mailx']
+        state: present 
+      when: inventory_hostname in groups['database']
