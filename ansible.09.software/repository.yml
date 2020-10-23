@@ -1,0 +1,11 @@
+- hosts: database
+  tasks:
+  - name: YUM repo
+    yum_repository:
+      name: mySQL
+      description: "MySQL 5.6 YUM Repo"
+      file: mySQL
+      baseurl: http://repo.mysql.com/yum/mysql-5.6-community/el/7/x86_64/
+      gpgkey: "http://repo.mysql.com/RPM-GPG-KEY-mysql"
+      gpgcheck: yes
+      enabled: yes
