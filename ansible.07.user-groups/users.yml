@@ -3,10 +3,10 @@
     - vars/user_list.yml
     - secret.yml
   tasks:
-  - name: Check if group exists
-    shell: /usr/bin/getent group | awk -F":" '{print $1}'
-    register: etc_groups
-    
+  - name: Ensure group "wheel" exists
+    group:
+      name: wheel
+      state: present
   - name: Create users on 'Webservers'
     user:
       name: "{{ item.username }}"
@@ -19,7 +19,6 @@
     when: 
       - "item.uid | string | first == '1'"
       - "'webservers' in group_names"
-      - "'wheel' in etc_groups.stdout_lines"
   - name: Create users on 'database'
     user:
       name: "{{ item.username }}"
@@ -32,7 +31,6 @@
     when: 
       - "item.uid | string | first == '2'"
       - "'database' in group_names"
-      - "'wheel' in etc_groups.stdout_lines"
   - name: Config SSH on 'Webservers'
     authorized_key:
       user: "{{ item.username }}"
@@ -42,7 +40,6 @@
     when: 
       - "item.uid | string | first == '1'"
       - "'webservers' in group_names"
-      - "'wheel' in etc_groups.stdout_lines"
   - name: Config SSH on 'database
     authorized_key:
       user: "{{ item.username }}"
@@ -52,4 +49,3 @@
     when: 
       - "item.uid | string | first == '2'"
       - "'database' in group_names"
-      - "'wheel' in etc_groups.stdout_lines"

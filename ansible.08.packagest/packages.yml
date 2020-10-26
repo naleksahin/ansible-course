@@ -3,10 +3,10 @@
     - name: Install pachages on proxy
       yum:
         name: ['tcpdump', 'mailx']
-        state: present 
+        state: latest 
       when: inventory_hostname in groups['proxy']
     - name: Install pachages on database
       yum:
         name: ['lsof', 'mailx']
-        state: present 
+        state: latest 
       when: inventory_hostname in groups['database']
