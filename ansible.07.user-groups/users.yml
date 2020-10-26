@@ -7,6 +7,9 @@
     group:
       name: wheel
       state: present
+    when:
+      - "'webservers' in group_names"
+      - "'database' in group_names"
   - name: Create users on 'Webservers'
     user:
       name: "{{ item.username }}"
