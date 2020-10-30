@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: database
   tasks:
   - name: Template a file 
     template:

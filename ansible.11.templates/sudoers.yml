@@ -7,4 +7,3 @@
       mode: 0440
       owner: root
       group: root
-      validate: "/sbin/visudo -cf"
