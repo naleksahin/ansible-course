@@ -1,0 +1,26 @@
+- hosts: all
+  tasks:
+  - name: Download HTML
+    get_url:
+      url: http://{{ inventory_hostname }}/index.html
+      dest: /home/ansible/{{ inventory_hostname }}-1
+    ignore_errors: yes
+ 
+- hosts: all
+  tasks:
+    - block: 
+      - name: Download HTML
+        get_url:
+          url: http://{{ inventory_hostname }}/index.html
+          dest: /home/ansible/{{ inventory_hostname }}-2
+      - name: File Downloaded
+        debug:
+          msg: "File downloaded"
+      rescue:
+        - name: Rescue block
+          debug:
+            msg: "The file doesn't exists!"
+      always: 
+        - name: Finish task
+          debug:
+            msg: "Attempt completed"

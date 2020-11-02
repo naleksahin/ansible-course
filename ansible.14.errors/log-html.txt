@@ -1,0 +1,59 @@
+
+PLAY [all] ******************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************************************************************************************************************
+ok: [ansible-2]
+ok: [ansible-3]
+ok: [ansible-4]
+ok: [ansible-5]
+
+TASK [Download HTML] ********************************************************************************************************************************************************************************************************************************************************
+fatal: [ansible-3]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-3-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-3/index.html"}
+...ignoring
+fatal: [ansible-2]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-2-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-2/index.html"}
+...ignoring
+fatal: [ansible-5]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-5-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-5/index.html"}
+...ignoring
+fatal: [ansible-4]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-4-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-4/index.html"}
+...ignoring
+
+PLAY [all] ******************************************************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ******************************************************************************************************************************************************************************************************************************************************
+ok: [ansible-3]
+ok: [ansible-4]
+ok: [ansible-2]
+ok: [ansible-5]
+
+TASK [Download HTML] ********************************************************************************************************************************************************************************************************************************************************
+fatal: [ansible-3]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-3-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-3/index.html"}
+fatal: [ansible-4]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-4-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-4/index.html"}
+fatal: [ansible-2]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-2-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-2/index.html"}
+fatal: [ansible-5]: FAILED! => {"changed": false, "dest": "/home/ansible/ansible-5-1", "elapsed": 0, "msg": "Request failed: <urlopen error [Errno 111] Connection refused>", "url": "http://ansible-5/index.html"}
+
+TASK [Rescue block] *********************************************************************************************************************************************************************************************************************************************************
+ok: [ansible-3] => {
+    "msg": "The file doesn't exists!"
+}
+ok: [ansible-4] => {
+    "msg": "The file doesn't exists!"
+}
+ok: [ansible-2] => {
+    "msg": "The file doesn't exists!"
+}
+ok: [ansible-5] => {
+    "msg": "The file doesn't exists!"
+}
+
+TASK [Create file inventory_hostname-2] *************************************************************************************************************************************************************************************************************************************
+ok: [ansible-4]
+ok: [ansible-3]
+ok: [ansible-2]
+ok: [ansible-5]
+
+PLAY RECAP ******************************************************************************************************************************************************************************************************************************************************************
+ansible-2                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=1   
+ansible-3                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=1   
+ansible-4                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=1   
+ansible-5                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=1    ignored=1   
+
