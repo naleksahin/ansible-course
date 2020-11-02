@@ -3,11 +3,10 @@
   - name: Creates a cron file under /etc/cron.d
     cron:
       name: 
-      minute: 0
-      hour: "*"
-      day: "*"
-      month: "*"
-      weekday: "*"
+      special_time: hourly
       user: root
       job: "date >> /var/log/time.log"
-      cron_file: ansible_date_log
+  - name: Check cron
+    shell: crontab -l
+    register: ps
+  - debug: var=ps.stdout_lines
