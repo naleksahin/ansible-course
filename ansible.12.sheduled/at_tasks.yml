@@ -1,0 +1,16 @@
+- hosts: database
+  tasks:
+  - name: install at package
+    yum:
+      name: at
+      state: latest 
+  - name: enable at service
+    service:
+      name: atd
+      state: started
+      enabled: true
+  - name: Schedule a command to execute in 20 minutes as root
+    ansible.posix.at:
+      command: df -h / >/tmp/diskspace
+      count: 20
+      units: minutes
