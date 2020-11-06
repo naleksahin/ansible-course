@@ -1,0 +1,3 @@
+The address of the server is: {{ ansible_default_ipv4.address }}
+Hello from {{ inventory_hostname }} {{ ansible_default_ipv4.address }}
+{{ hostvars[inventory_hostname].ansible_distribution }}} is my OS

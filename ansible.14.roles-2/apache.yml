@@ -1,0 +1,5 @@
+- hosts: database
+  vars_files:
+    - secret.yml
+  roles:
+    - mysql
