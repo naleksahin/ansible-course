@@ -1,0 +1,4 @@
+Hello from ansible-3 10.0.2.15
+CentOS is my OS
+Hello from ansible-4 10.0.2.15
+CentOS is my OS
