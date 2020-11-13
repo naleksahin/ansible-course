@@ -10,12 +10,17 @@
       path: /mnt/mysql_backups/database_list.txt
       dest:  /mnt/mysql_backups/archive.gz
       format: gz
+      force_archive: true
   - name: Specifying a destination path
     fetch:
       src: /mnt/mysql_backups/archive.gz
       dest: /home/ansible/
       flat: yes
-- hosts: localhost
-  tasks:
-  - name: unarchive a tar from an URL 
-    shell: gunzip -c /home/ansible/archive.gz > /sync/database_list.txt
+  - name: unarchive a tar from an URL
+    unarchive:    
+      src: "/home/ansible/archive.gz"
+      dest: "/sync/"
+      extra_opts:
+        - --transform
+        - s/^xxx/yyy/
+    delegate_to: 127.0.0.1
