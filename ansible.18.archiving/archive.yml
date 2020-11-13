@@ -1,0 +1,21 @@
+- hosts: database
+  tasks:
+  - name : Create file
+    lineinfile :
+      path: "/mnt/mysql_backups/database_list.txt"
+      line: "dev,test,qa,prod"
+      create: yes
+  - name: Use gzip
+    community.general.archive:
+      path: /mnt/mysql_backups/database_list.txt
+      dest:  /mnt/mysql_backups/archive.gz
+      format: gz
+  - name: Specifying a destination path
+    fetch:
+      src: /mnt/mysql_backups/archive.gz
+      dest: /home/ansible/
+      flat: yes
+- hosts: localhost
+  tasks:
+  - name: unarchive a tar from an URL 
+    shell: gunzip -c /home/ansible/archive.gz > /sync/database_list.txt
